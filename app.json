@@ -11,7 +11,7 @@
         "pyrogram",
         "telethon"
     ],
-    "repository": "https://github.com/petinggint/StringGenBot",
+    "repository": "https://github.com/petinggint/stringvin",
     "env": {
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
