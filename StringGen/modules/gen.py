@@ -46,19 +46,19 @@ async def gen_session(
     else:
         ty = f"ᴩʏʀᴏɢʀᴀᴍ v2"
 
-    await message.reply_text(f"» ᴛʀʏɪɴɢ ᴛᴏ sᴛᴀʀᴛ {ty} sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ...")
+    await message.reply_text(f"» ᴍᴇɴᴄᴏʙᴀ ᴍᴇᴍᴜʟᴀɪ {ty} ᴘᴇɴɢᴀᴍʙɪʟᴀɴ sᴛʀɪɴɢ...")
 
     try:
         api_id = await Anony.ask(
             identifier=(message.chat.id, user_id, None),
-            text="» ᴘʟᴇᴀsᴇ ᴇɴᴛᴇʀ ʏᴏᴜʀ ᴀᴘɪ ɪᴅ ᴛᴏ ᴘʀᴏᴄᴇᴇᴅ :",
+            text="» ᴋɪʀɪᴍ ᴀᴘɪ ɪᴅ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ sᴛʀɪɴɢ ᴀɴᴅᴀ :",
             filters=filters.text,
             timeout=300,
         )
     except ListenerTimeout:
         return await Anony.send_message(
             user_id,
-            "» ᴛɪᴍᴇᴅ ʟɪᴍɪᴛ ʀᴇᴀᴄʜᴇᴅ ᴏғ 5 ᴍɪɴᴜᴛᴇs.\n\nᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            "» ʙᴀᴛᴀs ᴡᴀᴋᴛᴜ ʜᴀʙɪs, ᴛᴜɴɢɢᴜ 𝟻 ᴍᴇɴɪᴛ ʟᴀɢɪ.\n\nʟᴀʟᴜ sᴛᴀʀᴛ ᴜʟᴀɴɢ ʙᴏᴛ ɴʏᴀ.",
             reply_markup=retry_key,
         )
 
@@ -70,21 +70,21 @@ async def gen_session(
     except ValueError:
         return await Anony.send_message(
             user_id,
-            "» ᴛʜᴇ ᴀᴘɪ ɪᴅ ʏᴏᴜ'ᴠᴇ sᴇɴᴛ ɪs ɪɴᴠᴀʟɪᴅ.\n\nᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            "» ᴀᴘɪ ɪᴅ ʏᴀɴɢ ᴀɴᴅᴀ ᴋɪʀɪᴍ sᴀʟᴀʜ.\n\nsɪʟᴀʜᴋᴀɴ sᴛᴀʀᴛ ᴜʟᴀɴɢ ᴅᴇɴɢᴀɴ ᴛᴇʟɪᴛɪ.",
             reply_markup=retry_key,
         )
 
     try:
         api_hash = await Anony.ask(
             identifier=(message.chat.id, user_id, None),
-            text="» ᴘʟᴇᴀsᴇ ᴇɴᴛᴇʀ ʏᴏᴜʀ ᴀᴘɪ ʜᴀsʜ ᴛᴏ ᴘʀᴏᴄᴇᴇᴅ :",
+            text="» ᴛᴏʟᴏɴɢ ᴋɪʀɪᴍ ᴀᴘɪ ʜᴀsʜ ᴜɴᴛᴜᴋ ᴅɪ ᴘʀᴏsᴇs :",
             filters=filters.text,
             timeout=300,
         )
     except ListenerTimeout:
         return await Anony.send_message(
             user_id,
-            "» ᴛɪᴍᴇᴅ ʟɪᴍɪᴛ ʀᴇᴀᴄʜᴇᴅ ᴏғ 5 ᴍɪɴᴜᴛᴇs.\n\nᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            "» ᴡᴀᴋᴛᴜ ᴀɴᴅᴀ ᴛᴇʟᴀʜ ʜᴀʙɪs.\n\nsɪʟᴀʜᴋᴀɴ sᴛᴀʀᴛ ᴜʟᴀɴɢ ᴅᴇɴɢᴀɴ ᴛᴇʟɪᴛɪ.",
             reply_markup=retry_key,
         )
 
@@ -96,21 +96,21 @@ async def gen_session(
     if len(api_hash) < 30:
         return await Anony.send_message(
             user_id,
-            "» ᴛʜᴇ ᴀᴘɪ ʜᴀsʜ ʏᴏᴜ'ᴠᴇ sᴇɴᴛ ɪs ɪɴᴠᴀʟɪᴅ.\n\nᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            "» ᴀᴘɪ ʜᴀsʜ ʏᴀɴɢ ᴀɴᴅᴀ ᴋɪʀɪᴍ sᴀʟᴀʜ .\n\nsɪʟᴀʜᴋᴀɴ sᴛᴀʀᴛ ᴜʟᴀɴɢ ᴅᴇɴɢᴀɴ ᴛᴇʟɪᴛɪ.",
             reply_markup=retry_key,
         )
 
     try:
         phone_number = await Anony.ask(
             identifier=(message.chat.id, user_id, None),
-            text="» ᴘʟᴇᴀsᴇ ᴇɴᴛᴇʀ ʏᴏᴜʀ ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀ ᴛᴏ ᴘʀᴏᴄᴇᴇᴅ :",
+            text="» ᴛᴏʟᴏɴɢ ᴋɪʀɪᴍ ɴᴏᴍᴏʀ ᴀɴᴅᴀ ᴜɴᴛᴜᴋ ᴅɪᴘʀᴏsᴇs :",
             filters=filters.text,
             timeout=300,
         )
     except ListenerTimeout:
         return await Anony.send_message(
             user_id,
-            "» ᴛɪᴍᴇᴅ ʟɪᴍɪᴛ ʀᴇᴀᴄʜᴇᴅ ᴏғ 5 ᴍɪɴᴜᴛᴇs.\n\nᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            "» ᴡᴀᴋᴛᴜ ᴀɴᴅᴀ ᴛᴇʟᴀʜ ʜᴀʙɪs.\n\nsɪʟᴀʜᴋᴀɴ ᴄᴏʙᴀ ʟᴀɢɪ ᴅᴇɴɢᴀɴ ᴛᴇʟɪᴛɪ.",
             reply_markup=retry_key,
         )
 
@@ -118,7 +118,7 @@ async def gen_session(
         return
     phone_number = phone_number.text
 
-    await Anony.send_message(user_id, "» ᴛʀʏɪɴɢ ᴛᴏ sᴇɴᴅ ᴏᴛᴩ ᴀᴛ ᴛʜᴇ ɢɪᴠᴇɴ ɴᴜᴍʙᴇʀ...")
+    await Anony.send_message(user_id, "» ᴍᴇɴᴄᴏʙᴀ ᴍᴇɴɢɪʀɪᴍ ᴏᴛᴘ ᴋᴇ ɴᴏᴍᴏʀ ᴀɴᴅᴀ...")
     if telethon:
         client = TelegramClient(StringSession(), api_id, api_hash)
     elif old_pyro:
@@ -137,26 +137,26 @@ async def gen_session(
     except FloodWait as f:
         return await Anony.send_message(
             user_id,
-            f"» ғᴀɪʟᴇᴅ ᴛᴏ sᴇɴᴅ ᴄᴏᴅᴇ ғᴏʀ ʟᴏɢɪɴ.\n\nᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ғᴏʀ {f.value or f.x} sᴇᴄᴏɴᴅs ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ.",
+            f"» ɢᴀɢᴀʟ ᴍᴇɴɢɪʀɪᴍ ᴄᴏᴅᴇ ᴏᴛᴘ.\n\nᴅɪʜᴀʀᴀᴘ ᴛᴜɴɢɢᴜ {f.value or f.x} ᴍᴇɴɪᴛ ᴅᴀɴ ᴄᴏʙᴀ ʟᴀɢɪ.",
             reply_markup=retry_key,
         )
     except (ApiIdInvalid, ApiIdInvalidError, ApiIdInvalid1):
         return await Anony.send_message(
             user_id,
-            "» ᴀᴘɪ ɪᴅ ᴏʀ ᴀᴘɪ ʜᴀsʜ ɪs ɪɴᴠᴀʟɪᴅ.\n\nᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ ʏᴏᴜʀ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            "» ᴀᴘɪ ɪᴅ ᴏʀ ᴀᴘɪ ʜᴀsʜ ᴀɴᴅᴀ sᴀʟᴀʜ.\n\nᴄᴏʙᴀ ʟᴀɢɪ ᴅᴇɴɢᴀɴ ᴛᴇʟɪᴛɪ ᴅᴀɴ sᴛᴀʀᴛ ᴜʟᴀɴɢ ʙᴏᴛ ɴʏᴀ.",
             reply_markup=retry_key,
         )
     except (PhoneNumberInvalid, PhoneNumberInvalidError, PhoneNumberInvalid1):
         return await Anony.send_message(
             user_id,
-            "» ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀ ɪɴᴠᴀʟɪᴅ.\n\nᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ ʏᴏᴜʀ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            "» ɴᴏᴍᴏʀ ᴀɴᴅᴀ sᴀʟᴀʜ.\n\nᴄᴏʙᴀ ʟᴀɢɪ ᴅᴇɴɢᴀɴ ᴛᴇʟɪᴛɪ ᴅᴀɴ sᴛᴀʀᴛ ᴜʟᴀɴɢ ʙᴏᴛ ɴʏᴀ.",
             reply_markup=retry_key,
         )
 
     try:
         otp = await Anony.ask(
             identifier=(message.chat.id, user_id, None),
-            text=f"ᴘʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛʜᴇ ᴏᴛᴘ sᴇɴᴛ ᴛᴏ {phone_number}.\n\nɪғ ᴏᴛᴩ ɪs <code>12345</code>, ᴩʟᴇᴀsᴇ sᴇɴᴅ ɪᴛ ᴀs <code>1 2 3 4 5.</code>",
+            text=f"ᴛᴏʟᴏɴɢ ᴋɪʀɪᴍ ᴄᴏᴅᴇ ᴀɴᴅᴀ {phone_number}.\n\nᴄᴏᴅᴇ ᴏᴛᴘ ᴀɴᴅᴀ <code>12345</code>, ᴋɪʀɪᴍ ᴅᴇɴɢᴀɴ sᴘᴀsɪ <code>1 2 3 4 5.</code>",
             filters=filters.text,
             timeout=600,
         )
@@ -165,7 +165,7 @@ async def gen_session(
     except ListenerTimeout:
         return await Anony.send_message(
             user_id,
-            "» ᴛɪᴍᴇ ʟɪᴍɪᴛ ʀᴇᴀᴄʜᴇᴅ ᴏғ 10 ᴍɪɴᴜᴛᴇs.\n\nᴩʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ ʏᴏᴜʀ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            "» ᴡᴀᴋᴛᴜ ᴀɴᴅᴀ ʜᴀʙɪs.\n\nᴛᴏʟᴏɴɢ ᴜʟᴀɴɢɪ ᴅᴇɴɢᴀɴ ᴛᴇʟɪᴛɪ ᴅᴀɴ ᴛɪᴅᴀᴋ ʙᴏʟᴇʜ ʟᴀᴍᴀ.",
             reply_markup=retry_key,
         )
 
@@ -178,7 +178,7 @@ async def gen_session(
     except (PhoneCodeInvalid, PhoneCodeInvalidError, PhoneCodeInvalid1):
         return await Anony.send_message(
             user_id,
-            "» ᴛʜᴇ ᴏᴛᴩ ʏᴏᴜ'ᴠᴇ sᴇɴᴛ ɪs <b>ᴡʀᴏɴɢ.</b>\n\nᴩʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ ʏᴏᴜʀ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            "» ᴄᴏᴅᴇ ʏᴀɴɢ ᴀɴᴅᴀ ᴋɪʀɪᴍ <b>sᴀʟᴀʜ.</b>\n\nᴄᴏʙᴀ sᴛᴀʀᴛ ᴜʟᴀɴɢ ᴅᴀɴ ᴊᴀɴɢᴀɴ ʟᴜᴘᴀ ᴛᴇʟɪᴛɪ.",
             reply_markup=retry_key,
         )
     except (PhoneCodeExpired, PhoneCodeExpiredError, PhoneCodeExpired1):
@@ -191,14 +191,14 @@ async def gen_session(
         try:
             pwd = await Anony.ask(
                 identifier=(message.chat.id, user_id, None),
-                text="» ᴘʟᴇᴀsᴇ ᴇɴᴛᴇʀ ʏᴏᴜʀ ᴛᴡᴏ sᴛᴇᴘ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴘᴀssᴡᴏʀᴅ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ :",
+                text="» ᴛᴏʟᴏɴɢ ᴋɪʀɪᴍ ᴘᴀssᴡᴏʀᴅ ᴠ𝟸ʟ ᴀɴᴅᴀ ᴜɴᴛᴜᴋ ᴍᴇʟᴀɴᴊᴜᴛᴋᴀɴ ᴘᴇᴍʙᴜᴀᴛᴀɴ sᴛʀɪɴɢ :",
                 filters=filters.text,
                 timeout=300,
             )
         except ListenerTimeout:
             return Anony.send_message(
                 user_id,
-                "» ᴛɪᴍᴇᴅ ʟɪᴍɪᴛ ʀᴇᴀᴄʜᴇᴅ ᴏғ 5 ᴍɪɴᴜᴛᴇs.\n\nᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+                "» ᴡᴀᴋᴛᴜ ᴀɴᴅᴀ ʜᴀʙɪs, ᴜʟᴀɴɢɪ 𝟻 ᴍᴇɴɪᴛ ʟᴀɢɪ.\n\nᴅᴀɴ sᴛᴀʀᴛ ᴜʟᴀɴɢ ʙᴏᴛɴʏᴀ.",
                 reply_markup=retry_key,
             )
 
@@ -214,7 +214,7 @@ async def gen_session(
         except (PasswordHashInvalid, PasswordHashInvalidError, PasswordHashInvalid1):
             return await Anony.send_message(
                 user_id,
-                "» ᴛʜᴇ ᴩᴀssᴡᴏʀᴅ ʏᴏᴜ'ᴠᴇ sᴇɴᴛ ɪs ᴡʀᴏɴɢ.\n\nᴩʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ ʏᴏᴜʀ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+                "» ᴘᴀssᴡᴏʀᴅ ᴠ𝟸ʟ ᴀɴᴅᴀ sᴀʟᴀʜ.\n\nᴄᴏʙᴀ ᴜʟᴀɴɢɪ ʟᴀɢɪ ᴅᴇɴɢᴀɴ ᴛᴇʟɪᴛɪ.",
                 reply_markup=retry_key,
             )
 
@@ -222,7 +222,7 @@ async def gen_session(
         return await Anony.send_message(user_id, f"ᴇʀʀᴏʀ : <code>{str(ex)}</code>")
 
     try:
-        txt = "ʜᴇʀᴇ ɪs ʏᴏᴜʀ {0} sᴛʀɪɴɢ sᴇssɪᴏɴ\n\n<code>{1}</code>\n\nᴀ sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ ʙʏ <a href={2}>ғᴀʟʟᴇɴ ᴀssᴏᴄɪᴀᴛɪᴏɴ</a>\n☠ <b>ɴᴏᴛᴇ :</b> ᴅᴏɴ'ᴛ sʜᴀʀᴇ ɪᴛ ᴡɪᴛʜ ʏᴏᴜʀ ɢɪʀʟғʀɪᴇɴᴅ."
+        txt = "ɪɴɪ ᴍɪʟɪᴋᴍᴜ {0} sᴛʀɪɴɢ sᴇssɪᴏɴ\n\n<code>{1}</code>\n\nsᴛʀɪɴɢ ʙᴜᴀᴛᴀɴ ʙᴏᴛ <a href={2}>ᴄᴀʟᴠɪɴ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ</a>\n☠ <b>ɴᴏᴛᴇ :</b> ᴊᴀɴɢᴀɴ ᴋᴀsɪʜ sᴛʀɪɴɢ ɪɴɪ ᴋᴇsɪᴀᴘᴀᴘᴜɴ."
         if telethon:
             string_session = client.session.save()
             await client.send_message(
@@ -231,7 +231,7 @@ async def gen_session(
                 link_preview=False,
                 parse_mode="html",
             )
-            await client(JoinChannelRequest("@FallenAssociation"))
+            await client(JoinChannelRequest("@InfoMusicCalvin"))
         else:
             string_session = await client.export_session_string()
             await client.send_message(
@@ -239,19 +239,19 @@ async def gen_session(
                 txt.format(ty, string_session, SUPPORT_CHAT),
                 disable_web_page_preview=True,
             )
-            await client.join_chat("FallenAssociation")
+            await client.join_chat("InfoMusicCalvin")
     except KeyError:
         pass
     try:
         await client.disconnect()
         await Anony.send_message(
             chat_id=user_id,
-            text=f"sᴜᴄᴄᴇssғᴜʟʟʏ ɢᴇɴᴇʀᴀᴛᴇᴅ ʏᴏᴜʀ {ty} sᴛʀɪɴɢ sᴇssɪᴏɴ.\n\nᴘʟᴇᴀsᴇ ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs ғᴏʀ ɢᴇᴛᴛɪɴɢ ɪᴛ.\n\nᴀ sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ ʙʏ <a href={SUPPORT_CHAT}>ғᴀʟʟᴇɴ ᴀssᴏᴄɪᴀᴛɪᴏɴ</a>.",
+            text=f"ʙᴇʀʜᴀsɪʟ ᴍᴇᴍʙᴜᴀᴛ {ty} sᴛʀɪɴɢ sᴇssɪᴏɴ.\n\nᴅᴀɴ ᴛᴏʟᴏɴɢ ᴄᴇᴋ ᴘᴇsᴀɴ ᴛᴇʀsɪᴍᴘᴀɴ ᴀɴᴅᴀ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴀᴍʙɪʟ sᴛʀɪɴɢ ʏᴀɴɢ sᴜᴅᴀʜ ᴊᴀᴅɪ.\n\nsᴛʀɪɴɢ ʙᴜᴀᴛᴀɴ ʙᴏᴛ <a href={SUPPORT_CHAT}>ᴄᴀʟᴠɪɴ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ</a>.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs",
+                            text="ᴘᴇsᴀɴ ᴛᴇʀsɪᴍᴘᴀɴ",
                             url=f"tg://openmessage?user_id={user_id}",
                         )
                     ]
@@ -266,17 +266,17 @@ async def gen_session(
 async def cancelled(message):
     if "/cancel" in message.text:
         await message.reply_text(
-            "» ᴄᴀɴᴄᴇʟʟᴇᴅ ᴛʜᴇ ᴏɴɢᴏɪɴɢ sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛɪᴏɴ ᴩʀᴏᴄᴇss.", reply_markup=retry_key
+            "» ᴍᴇᴍʙᴀᴛᴀʟᴋᴀɴ ᴘʀᴏsᴇs ᴘᴇɴɢᴀᴍʙɪʟᴀɴ sᴇsɪ sᴛʀɪɴɢ.", reply_markup=retry_key
         )
         return True
     elif "/restart" in message.text:
         await message.reply_text(
-            "» sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇsᴛᴀʀᴛᴇᴅ ᴛʜɪs ʙᴏᴛ.", reply_markup=retry_key
+            "» ʙᴇʀʜᴀsɪʟ ᴍᴇʀᴇsᴛᴀʀᴛ ʙᴏᴛ ɪɴɪ.", reply_markup=retry_key
         )
         return True
     elif message.text.startswith("/"):
         await message.reply_text(
-            "» ᴄᴀɴᴄᴇʟʟᴇᴅ ᴛʜᴇ ᴏɴɢᴏɪɴɢ sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛɪᴏɴ ᴩʀᴏᴄᴇss.", reply_markup=retry_key
+            "» ᴍᴇᴍʙᴀᴛᴀʟᴋᴀɴ ᴘʀᴏsᴇs ᴘᴇɴɢᴀᴍʙɪʟᴀɴ sᴇsɪ sᴛʀɪɴɢ.", reply_markup=retry_key
         )
         return True
     else:
