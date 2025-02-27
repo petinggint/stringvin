@@ -165,7 +165,7 @@ async def gen_session(
     except ListenerTimeout:
         return await Anony.send_message(
             user_id,
-            "» ᴡᴀᴋᴛᴜ ᴀɴᴅᴀ ʜᴀʙɪs.\n\sɪʟᴀʜᴋᴀɴ sᴛᴀʀᴛ ᴜʟᴀɴɢ ᴅᴇɴɢᴀɴ ᴛᴇʟɪᴛɪ.",
+            "» ᴡᴀᴋᴛᴜ ᴀɴᴅᴀ ʜᴀʙɪs.\n\nsɪʟᴀʜᴋᴀɴ sᴛᴀʀᴛ ᴜʟᴀɴɢ ᴅᴇɴɢᴀɴ ᴛᴇʟɪᴛɪ.",
             reply_markup=retry_key,
         )
 
